@@ -136,3 +136,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+auth-providers.ts

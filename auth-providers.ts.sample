@@ -1,0 +1,8 @@
+import Providers from "next-auth/providers";
+
+export const GoogleProvider = Providers.Google({
+    clientId:
+      "<something>.apps.googleusercontent.com",
+    clientSecret: "<something>",
+  });
+  
