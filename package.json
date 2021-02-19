@@ -3,7 +3,7 @@
   "author": "Vojtěch Sázel <vsazel@redhat.com>",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node ./server.js",
+    "dev": "env NODE_TLS_REJECT_UNAUTHORIZED=0 node ./server.js",
     "build": "next build",
     "start": "env NODE_ENV=production node ./server.js"
   },

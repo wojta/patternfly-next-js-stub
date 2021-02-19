@@ -28,6 +28,9 @@ app.prepare().then(() => {
     // This tells it to parse the query portion of the URL.
     const parsedUrl = parse(req.url, true);
     const { pathname, query } = parsedUrl;
+    const items=[];
+    items.push(query.item);
+    console.log(`req ${pathname} query=${items} method=${req.method}`);
     handle(req, res, parsedUrl);
     // if (
     //   serverType === "both" ||
