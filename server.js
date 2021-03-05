@@ -2,7 +2,7 @@ const { createServer, request } = require("http");
 const { parse } = require("url");
 const next = require("next");
 // const cors = require("cors")();
-const portNumber=3000;
+const portNumber=8080;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();

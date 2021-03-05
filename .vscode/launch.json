@@ -13,7 +13,8 @@
             ],
             "program": "${workspaceFolder}/server.js",
             "env": {
-                "NODE_TLS_REJECT_UNAUTHORIZED":"0"    
+                "NODE_TLS_REJECT_UNAUTHORIZED":"0",
+                "NEXTAUTH_URL":"http://localhost:8080"
             },
             "outFiles": [
                 "${workspaceFolder}/**/*.js"

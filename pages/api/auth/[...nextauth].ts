@@ -1,15 +1,25 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth";
 import {
+  UsernameProvider,
   GoogleProvider,
+  MojeIdAuthProvider,
   OpenShiftOAuthProvider,
 } from "../../../auth-providers";
 
 export default (req: NextApiRequest, res: NextApiResponse) =>
   NextAuth(req, res, {
-    providers: [GoogleProvider, OpenShiftOAuthProvider],
-    session: { jwt: false },
+    providers: [
+      UsernameProvider,
+      OpenShiftOAuthProvider,
+      GoogleProvider,
+      MojeIdAuthProvider,
+    ],
+    session: { jwt: true },
     debug: true,
+    jwt: {
+      secret: "INp8IvdIyeMcoGAgFGoA61DdBglwwSqnXJZkgz8PSnw",
+    },
     events: {
       async signIn(message) {
         console.log(`Auth signIn: ${message}`);
@@ -28,16 +38,6 @@ export default (req: NextApiRequest, res: NextApiResponse) =>
       },
       async error(message) {
         console.log(`Auth error: ${message}`);
-      },
-    },
-    callbacks: {
-      async session(session, token) {
-        console.log("Session callback");
-        if (token?.accessToken) {
-          // Add property to session, like an access_token from a provider
-          session.accessToken = token.accessToken;
-        }
-        return session;
       },
     },
   });

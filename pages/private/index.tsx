@@ -10,7 +10,7 @@ const PrivatePage = () => {
       <Button onClick={()=>signIn("openshift")}>Sign in</Button>
     </>}
     {session && <>
-      Signed in as {session.user.email} <br/>
+      Signed in as {session.user.name} ({session.user.email}) <br/>
       <Button onClick={()=>signOut()}>Sign out</Button>
     </>}
   </>

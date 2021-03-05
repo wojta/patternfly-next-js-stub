@@ -3,7 +3,7 @@
   "author": "Vojtěch Sázel <vsazel@redhat.com>",
   "version": "1.0.0",
   "scripts": {
-    "dev": "env NODE_TLS_REJECT_UNAUTHORIZED=0 node ./server.js",
+    "dev": "env NODE_TLS_REJECT_UNAUTHORIZED=0 NEXTAUTH_URL=\"http://localhost:8080\" node ./server.js",
     "build": "next build",
     "start": "env NODE_ENV=production node ./server.js"
   },
@@ -18,8 +18,8 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@types/next": "^9.0.0",
     "@types/next-auth": "^3.1.24",
+    "@types/node": "^14.14.31",
     "@types/react": "^17.0.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
