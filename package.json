@@ -12,6 +12,7 @@
     "@patternfly/react-icons": "^4.9.1",
     "next": "^10.0.0",
     "next-auth": "^3.4.2",
+    "next-remove-imports": "^1.0.5",
     "next-transpile-modules": "^7.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
