@@ -21,6 +21,7 @@ jobs:
 
     steps:
     - run: "echo \"$AUTH_PROVIDERS\" > ./auth-providers.ts"
+    - run: "pwd; ls -la"
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
       with:
