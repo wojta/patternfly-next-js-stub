@@ -20,8 +20,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - run: "echo \"$AUTH_PROVIDERS\" > ./auth-providers.ts"
-    - run: "pwd; ls -la"
+    - env:
+       AUTH_PROVIDERS: ${{ secrets.AUTH_PROVIDERS }}
+    - run: "echo \"$AUTH_PROVIDERS\" > ../auth-providers.ts"
+    - run: "ls -la .."
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
       with:
