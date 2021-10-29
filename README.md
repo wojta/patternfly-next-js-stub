@@ -1,4 +1,4 @@
-# Patternfly with Next.js stub
+# PatternFly with Next.js stub and authentication
 
 [<img src="https://github.com/wojta/patternfly-next-js-stub/actions/workflows/node.js.yml/badge.svg">](https://github.com/wojta/patternfly-next-js-stub/actions/workflows/node.js.yml)
 
