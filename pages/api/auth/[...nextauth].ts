@@ -2,15 +2,13 @@ import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth";
 import {
   UsernameProvider,
-  GoogleProvider,
-  // OpenShiftOAuthProvider,
+  GoogleProvider
 } from "../../../auth-providers";
 
 export default (req: NextApiRequest, res: NextApiResponse) =>
   NextAuth(req, res, {
     providers: [
       UsernameProvider,
-      // OpenShiftOAuthProvider,
       GoogleProvider
     ],
     session: { jwt: true },
