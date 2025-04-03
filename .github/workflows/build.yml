@@ -28,5 +28,5 @@ jobs:
           AUTH_PROVIDERS: ${{ secrets.AUTH_PROVIDERS }}
         run: |
           mkdir -p src/app
-          echo \"$AUTH_PROVIDERS\" > src/app/auth-providers.ts
+          echo "$AUTH_PROVIDERS" | base64 -d > src/app/auth-providers.ts
       - run: "yarn build"
