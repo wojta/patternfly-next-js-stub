@@ -1,0 +1,32 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request_target:
+    types: [ assigned, opened, synchronize, reopened ]
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 19.x ]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: "Setup auth-providers.ts"
+        env:
+          AUTH_PROVIDERS: ${{ secrets.AUTH_PROVIDERS }}
+        run: |
+          mkdir -p src/app
+          echo \"$AUTH_PROVIDERS\" > src/app/auth-providers.ts
+      - run: "yarn build"
