@@ -1,33 +1,50 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "sourceMap": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "sourceMap": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["node_modules/@patternfly/react-core/dist/styles/assets/*"]
+    },
+    "importHelpers": false,
+    "skipDefaultLibCheck": true,
   },
-  "exclude": [
-    "node_modules"
-  ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "auth-providers.ts",
-    "auth-providers.ts.sample"
+    "**/*.js",
+    "**/*.jsx",
+    ".next/types/**/*.ts",
+    "src/app/auth-providers.ts",
+    "src/app/auth-providers.ts.sample"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
