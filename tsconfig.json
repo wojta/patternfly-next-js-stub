@@ -28,8 +28,8 @@
       "@/*": [
         "./src/*"
       ],
-      "@app/*": ["src/app/*"],
-      "@assets/*": ["node_modules/@patternfly/react-core/dist/styles/assets/*"]
+      "@app/*": ["./src/app/*"],
+      "@assets/*": ["./node_modules/@patternfly/react-core/dist/styles/assets/*"]
     },
     "importHelpers": false,
     "skipDefaultLibCheck": true,
