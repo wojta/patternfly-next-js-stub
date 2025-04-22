@@ -14,3 +14,7 @@ $ yarn dev
 ```
 
 App will become available on [http://localhost:3000](http://localhost:3000)
+
+Private page is then on [http://localhost:3000/private](http://localhost:3000/private)
+
+API you can call [http://localhost:3000/api/v1/privateApi](http://localhost:3000/api/v1/privateApi)
