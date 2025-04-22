@@ -5,7 +5,7 @@
 Example using [PatternFly](https://www.patternfly.org/) with [Next.js](https://nextjs.org/) and [NextAuth](https://next-auth.js.org/)
 
 ## Auth providers
-* [NextAuth](https://next-auth.js.org/) example is in [src/app/auth-providers.ts.sample] rename it to `src/app/auth-providers.ts`
+* [NextAuth](https://next-auth.js.org/) example is in [`src/app/auth-providers.ts.sample`](src/app/auth-providers.ts.sample) rename it to `src/app/auth-providers.ts`
 
 ## Start in dev mode (recommended)
 ```bash
