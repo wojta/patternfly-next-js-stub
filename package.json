@@ -1,7 +1,7 @@
 {
   "name": "patternfly-next-js-stub",
   "author": "Vojtěch Sázel <vsazel@gmail.com>",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "dev": "env NODE_TLS_REJECT_UNAUTHORIZED=0 next dev --turbopack",
     "build": "next build",
@@ -9,15 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@patternfly/react-core": "^6.1.0",
-    "@patternfly/react-icons": "^6.1.0",
-    "@patternfly/react-styles": "^6.1.0",
-    "@patternfly/react-tokens": "^6.1.0",
-    "jose": "^6.0.10",
-    "next": "15.2.3",
-    "next-auth": "^4.24.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@patternfly/react-core": "^6.4.0",
+    "@patternfly/react-icons": "^6.4.0",
+    "@patternfly/react-styles": "^6.4.0",
+    "@patternfly/react-tokens": "^6.4.0",
+    "jose": "^6.1.0",
+    "next": "15.4.7",
+    "next-auth": "^4.24.13",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
